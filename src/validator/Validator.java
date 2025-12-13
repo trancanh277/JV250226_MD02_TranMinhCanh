@@ -1,3 +1,5 @@
+package validator;
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
@@ -30,16 +32,20 @@ public class Validator {
 
         } while (true);
     }
-    public static LocalDate getDate(Scanner scanner, String suggest){
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+    public static Float getFloat(Scanner scanner, String suggest) {
+        String input = "";
         do {
-            String input = getSting(scanner, suggest);
+            System.out.println(suggest);
+            input = scanner.nextLine();
             try {
-                return LocalDate.parse(input, formatter);
-            }catch (Exception e){
-                System.err.println("Mời nhập định dạng ngày ");
+                return Float.parseFloat(input);
+
+            } catch (Exception e) {
+                System.err.println("Mời nhập số thực");
             }
-        }while (true);
+
+        } while (true);
     }
+
 
 }
