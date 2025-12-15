@@ -9,7 +9,8 @@ CREATE TABLE `exams` (
                          `exam_format` varchar(100) NOT NULL,
                          `status` int NOT NULL,
 
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
+	-- intellij bị lỗi tắt mất tab sql, e tìm code bên mysql workbench, coppy qua thiếu câu lệnh create database db_exam_management; 
 DELIMITER $$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `add_exam`(
     in p_exam_name varchar(150),
