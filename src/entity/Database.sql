@@ -1,3 +1,5 @@
+create database db_exam_management;
+use db_exam_management;
 DELIMITER $$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `add_exam`(
     in p_exam_name varchar(150),
