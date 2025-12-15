@@ -1,3 +1,15 @@
+create database db_exam_management;
+use db_exam_management;
+CREATE TABLE `exams` (
+                         `exam_id` int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+                         `exam_name` varchar(150) NOT NULL,
+                         `exam_date` date NOT NULL,
+                         `exam_time` float NOT NULL,
+                         `unit_time` varchar(15) NOT NULL,
+                         `exam_format` varchar(100) NOT NULL,
+                         `status` int NOT NULL,
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 DELIMITER $$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `add_exam`(
     in p_exam_name varchar(150),
